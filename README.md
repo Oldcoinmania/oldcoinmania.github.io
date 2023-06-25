@@ -1,2 +1,2 @@
-# test.github.io
+# oldcoinmania.github.io
 My home page.
