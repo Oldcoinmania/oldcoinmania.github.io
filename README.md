@@ -1,2 +1,2 @@
-# oldcoinmania.github.io
-My home page.
+# こいんまにあのホームページ
+自分のホームぺーぞ。ここで書いた方が速くない？？？((((
