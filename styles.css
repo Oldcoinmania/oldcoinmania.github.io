@@ -25,6 +25,10 @@ header {
     z-index: 1000;
 }
 
+@media screen and (max-width: 480px) {
+    header {font-size: 12px;}
+    }
+
 header h1 {
     margin: 0;
      color: white; /* テキストの色 */
@@ -92,4 +96,4 @@ footer{
 img {
     max-width: 100%;
     height: auto;
-  }
+}
