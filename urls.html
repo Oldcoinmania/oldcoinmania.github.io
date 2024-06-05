@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こいんまにあのホームページ | いろんなURL集</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
 </head>
 <body>
 <div class="wrap">
-<header>
-    <h1>こいんまにあのホームページ</h1>
-    <nav>
-        <ul>
-            <b>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="urls.html">いろんなURL集</a></li>
-                <li><a href="projects.html">プロジェクト</a></li>
-                <li><a href="calculator.html">電卓</a></li>
-            </b>
-        </ul>
-    </nav>
-</header>
+<div id="header-placeholder"></div>
 
 <section id="url"  style="margin-top: 100px;">
     <h2>いろんなURL集</h2>
@@ -81,9 +87,7 @@
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2024 こいんまにあ</p>
-</footer>
+<div id="footer-placeholder"></div>
 </div>
 </body>
 </html>

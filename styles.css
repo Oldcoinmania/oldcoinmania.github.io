@@ -1,4 +1,13 @@
 /* Reset CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+.zen-maru-gothic-regular {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     margin: 0;
     padding: 0;
@@ -30,7 +39,9 @@ header {
     }
 
 header h1 {
-    margin: 0;
+    font-family: "Zen Maru Gothic";
+    margin-top: -5px;
+    margin-bottom: 5px;
      color: white; /* テキストの色 */
     /*-webkit-text-stroke: 1px hsl(220, 75%, 25%); 縁取りの太さと色
     -moz-text-stroke: 1px hsl(220, 75%, 25%);*/
