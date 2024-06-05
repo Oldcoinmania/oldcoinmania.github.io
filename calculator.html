@@ -24,9 +24,6 @@
         });
     </script>
     <style>
-    body {
-        background-color: hsl(0, 0%, 80%);
-    }
     .calculator {
         width: 300px;
         margin: 50px auto;
@@ -59,7 +56,7 @@
 </head>
 <body>
 <div id="header-placeholder"></div>
-<div class="calculator" style="margin-top: 150px;">
+<div class="calculator" style="margin-top: 150px; margin-bottom: 130px;">
     <input type="text" class="display" id="display" readonly>
     <div class="buttons">
         <button onclick="appendToDisplay('%')">%</button>
@@ -138,7 +135,7 @@
         document.getElementById('display').value = displayValue;
         lastOperation = '';
     }
-  </script>
+</script>
 <div id="footer-placeholder"></div>
 </body>
 </html>

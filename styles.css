@@ -17,14 +17,15 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: hsl(0, 0%, 80%); /*f9f9f9*/
+    background: linear-gradient(to bottom, hsl(0, 0%, 40%), hsl(0, 0%, 80%)); /* 左から右への複数色のグラデーション */
+    /*background-color: hsl(0, 0%, 80%); /*f9f9f9*/
     color: hsl(0, 0%, 0%);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: linear-gradient(to right, hsl(353, 100%, 65%), hsl(233, 100%, 65%));
+    background: linear-gradient(to right, hsl(250, 80%, 65%), hsl(200, 80%, 65%));
     color: white;
     padding: 20px;
     position: fixed;
@@ -32,14 +33,14 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+    font-family: "Zen Maru Gothic";
 }
 
 @media screen and (max-width: 480px) {
-    header {font-size: 12px;}
+    header {font-size: 9px;}
     }
 
 header h1 {
-    font-family: "Zen Maru Gothic";
     margin-top: -5px;
     margin-bottom: 5px;
      color: white; /* テキストの色 */
@@ -96,7 +97,7 @@ section {
 
 footer{
     width: 100%;
-    background: linear-gradient(to right, hsl(233, 100%, 65%), hsl(353, 100%, 65%));
+    background: linear-gradient(to right, hsl(200, 80%, 65%), hsl(250, 80%, 65%));
     color: #fff;
     text-align: center;
     padding: 20px 0;
