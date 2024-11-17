@@ -5,68 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こいんまにあのホームページ | ペイント</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("footer-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>
 </head>
 <body>
     <div id="wrap">
-<div id="header-placeholder"></div>
+    <header>
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+        <h1>こいんまにあのホームページ</h1>
+        <nav>
+            <ul>
+                <b>
+                    <h3>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="urls.html">いろんなURL集</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="calculator.html">電卓</a></li>
+                    <li><a href="paint.html">ペイント</a></li>
+                </h3>
+                </b>
+            </ul>
+        </nav>
+    </header>
 
-<div id="paint" align="center">
-    <canvas id="canvas" width="600" height="400" style="background-color: white; margin-top: 150px; cursor: crosshair"></canvas>
-    <br>
-    <button id="clear-button" style="width: 100px; height:50px; cursor: pointer; margin: 5px; background-color: hsl(195, 30%, 90%); margin-bottom: 75px;">クリア</button>
-</div>
+    <div id="paint" align="center">
+        <canvas id="canvas" width="600" height="400" style="background-color: white; margin-top: 150px; cursor: crosshair"></canvas>
+        <br>
+        <button id="clear-button" style="width: 100px; height:50px; cursor: pointer; margin: 5px; background-color: hsl(195, 30%, 90%); margin-bottom: 75px;">クリア</button>
+    </div>
 
-<script>
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    let isDrawing = false;
-    let lastX = 0;
-    let lastY = 0;
-    ctx.lineWidth = 2.5;
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        ctx.lineWidth = 2.5;
 
-    canvas.addEventListener('mousedown', (e) => {
-        isDrawing = true;
-        [lastX, lastY] = [e.offsetX, e.offsetY];
-    });
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        });
 
-    canvas.addEventListener('mousemove', (e) => {
-        if (!isDrawing) return;
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
 
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(e.offsetX, e.offsetY);
-        ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
 
-        [lastX, lastY] = [e.offsetX, e.offsetY];
-    });
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        });
 
-    canvas.addEventListener('mouseup', () => {
-        isDrawing = false;
-    });
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
 
-    document.getElementById('clear-button').addEventListener('click', () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    });
-</script>
-<div id="footer-placeholder"></div>
+        document.getElementById('clear-button').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 こいんまにあ</p>
+    </footer>
 </div>
 </body>
 </html>

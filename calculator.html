@@ -5,24 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こいんまにあのホームページ | 電卓</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("footer-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>
     <style>
     .calculator {
         width: 300px;
@@ -55,87 +37,105 @@
     </style>
 </head>
 <body>
-<div id="header-placeholder"></div>
-<div class="calculator" style="margin-top: 150px; margin-bottom: 130px;">
-    <input type="text" class="display" id="display" readonly>
-    <div class="buttons">
-        <button onclick="appendToDisplay('%')">%</button>
-        <button onclick="clearLast()">CE</button>
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="appendToDisplay('/')">/</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('*')">*</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="backspace()">⌫</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()">=</button>
+    <header>
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+        <h1>こいんまにあのホームページ</h1>
+        <nav>
+            <ul>
+                <b>
+                    <h3>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="urls.html">いろんなURL集</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="calculator.html">電卓</a></li>
+                    <li><a href="paint.html">ペイント</a></li>
+                </h3>
+                </b>
+            </ul>
+        </nav>
+    </header>
+    <div class="calculator" style="margin-top: 150px; margin-bottom: 130px;">
+        <input type="text" class="display" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="clearLast()">CE</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+        </div>
     </div>
-</div>
 
-<script>
-    let displayValue = '';
-    let lastOperation = '';
+    <script>
+        let displayValue = '';
+        let lastOperation = '';
 
-    function appendToDisplay(value) {
-        if (lastOperation === '=') {
-            displayValue = '';
-        }
-        displayValue += value;
-        document.getElementById('display').value = displayValue;
-        lastOperation = '';
-    }
-
-    function backspace() {
-        displayValue = displayValue.slice(0, -1);
-        document.getElementById('display').value = displayValue;
-    }
-
-    function calculate() {
-        try {
-            const result = eval(displayValue);
-            document.getElementById('display').value = result;
-            displayValue = result.toString();
-            lastOperation = '=';
-        } catch (error) {
-            document.getElementById('display').value = 'エラー';
-            displayValue = '';
+        function appendToDisplay(value) {
+            if (lastOperation === '=') {
+                displayValue = '';
+            }
+            displayValue += value;
+            document.getElementById('display').value = displayValue;
             lastOperation = '';
         }
-    }
 
-    function clearDisplay() {
-        displayValue = '';
-        document.getElementById('display').value = displayValue;
-        lastOperation = '';
-    }
+        function backspace() {
+            displayValue = displayValue.slice(0, -1);
+            document.getElementById('display').value = displayValue;
+        }
 
-    function clearLast() {
-        let lastIndex = -1;
-        for (let i = displayValue.length - 1; i >= 0; i--) {
-            if (['+', '-', '*', '/', '%'].includes(displayValue[i])) {
-                lastIndex = i;
-                break;
+        function calculate() {
+            try {
+                const result = eval(displayValue);
+                document.getElementById('display').value = result;
+                displayValue = result.toString();
+                lastOperation = '=';
+            } catch (error) {
+                document.getElementById('display').value = 'エラー';
+                displayValue = '';
+                lastOperation = '';
             }
         }
-        if (lastIndex !== -1) {
-            displayValue = displayValue.slice(0, lastIndex + 1);
-        } else {
+
+        function clearDisplay() {
             displayValue = '';
+            document.getElementById('display').value = displayValue;
+            lastOperation = '';
         }
-        document.getElementById('display').value = displayValue;
-        lastOperation = '';
-    }
-</script>
-<div id="footer-placeholder"></div>
+
+        function clearLast() {
+            let lastIndex = -1;
+            for (let i = displayValue.length - 1; i >= 0; i--) {
+                if (['+', '-', '*', '/', '%'].includes(displayValue[i])) {
+                    lastIndex = i;
+                    break;
+                }
+            }
+            if (lastIndex !== -1) {
+                displayValue = displayValue.slice(0, lastIndex + 1);
+            } else {
+                displayValue = '';
+            }
+            document.getElementById('display').value = displayValue;
+            lastOperation = '';
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 こいんまにあ</p>
+    </footer>
 </body>
 </html>

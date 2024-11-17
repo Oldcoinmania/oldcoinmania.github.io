@@ -5,89 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こいんまにあのホームページ | いろんなURL集</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("footer-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>
 </head>
 <body>
-<div class="wrap">
-<div id="header-placeholder"></div>
+    <div class="wrap">
+    <header>
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+        <h1>こいんまにあのホームページ</h1>
+        <nav>
+            <ul>
+                <b>
+                    <h3>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="urls.html">いろんなURL集</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="calculator.html">電卓</a></li>
+                    <li><a href="paint.html">ペイント</a></li>
+                </h3>
+                </b>
+            </ul>
+        </nav>
+    </header>
 
-<section id="url"  style="margin-top: 100px;">
-    <h2>いろんなURL集</h2>
-    <div class="sites "style="line-height: 30px;">
-        <p dir="url" class="Links">
-            <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">Twitter</span>
-            <a href="https://twitter.com/oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://twitter.com/oldcoinmania</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">Scratch</span>
-            <a href="https://scratch.mit.edu/users/Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://scratch.mit.edu/users/Oldcoinmania</span>
-            </a>
-        </p>
-        <p dir="url" class="Links"><span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">DeviantArt</span>
-            <a href="https://www.deviantart.com/oldcoinmania64" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://www.deviantart.com/oldcoinmania64</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">Game Jolt</span>
-            <a href="https://gamejolt.com/@Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://gamejolt.com/@Oldcoinmania</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">YouTube</span>
-            <a href="https://www.youtube.com/channel/UC2DODBWwT5feLqU0FUVC84w" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://www.youtube.com/channel/UC2DODBWwT5feLqU0FUVC84w</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">note</span>
-            <a href="https://note.com/oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://note.com/oldcoinmania</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="">Misskey.io</span>
-            <a href="https://misskey.io/@Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="text-decoration: underline;">https://misskey.io/@Oldcoinmania</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="">GitHub</span>
-            <a href="https://github.com/Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="text-decoration: underline;">https://github.com/Oldcoinmania</span>
-            </a>
-        </p>
-        <p dir="url" class="Links">
-            <span class="sitename" style="">旧ホームページ</span>
-            <a href="https://sites.google.com/view/oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
-                <span class="realurl" style="text-decoration: underline;">https://sites.google.com/view/oldcoinmania</span>
-            </a>
-        </p>
+    <section id="url"  style="margin-top: 100px;">
+        <h2>いろんなURL集</h2>
+        <div class="sites "style="line-height: 30px;">
+            <p dir="url" class="Links">
+                <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">Twitter</span>
+                <a href="https://twitter.com/oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://twitter.com/oldcoinmania</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">Scratch</span>
+                <a href="https://scratch.mit.edu/users/Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://scratch.mit.edu/users/Oldcoinmania</span>
+                </a>
+            </p>
+            <p dir="url" class="Links"><span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">DeviantArt</span>
+                <a href="https://www.deviantart.com/oldcoinmania64" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://www.deviantart.com/oldcoinmania64</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">Game Jolt</span>
+                <a href="https://gamejolt.com/@Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://gamejolt.com/@Oldcoinmania</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">YouTube</span>
+                <a href="https://www.youtube.com/channel/UC2DODBWwT5feLqU0FUVC84w" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://www.youtube.com/channel/UC2DODBWwT5feLqU0FUVC84w</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="font-family: 'M PLUS 2', Arial; font-weight: 400;">note</span>
+                <a href="https://note.com/oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="font-family: 'M PLUS 2', Arial; font-weight: 400; text-decoration: underline;">https://note.com/oldcoinmania</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="">Misskey.io</span>
+                <a href="https://misskey.io/@Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="text-decoration: underline;">https://misskey.io/@Oldcoinmania</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="">GitHub</span>
+                <a href="https://github.com/Oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="text-decoration: underline;">https://github.com/Oldcoinmania</span>
+                </a>
+            </p>
+            <p dir="url" class="Links">
+                <span class="sitename" style="">旧ホームページ</span>
+                <a href="https://sites.google.com/view/oldcoinmania" target="_blank" style="color: inherit; text-decoration: none;">
+                    <span class="realurl" style="text-decoration: underline;">https://sites.google.com/view/oldcoinmania</span>
+                </a>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 こいんまにあ</p>
+    </footer>
     </div>
-</section>
-
-<div id="footer-placeholder"></div>
-</div>
 </body>
 </html>

@@ -5,55 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こいんまにあのホームページ</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("footer-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>
 </head>
 <body>
-<div class="wrap">
-<div id="header-placeholder"></div>
+    <div class="wrap">
+    <header>
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+        <h1>こいんまにあのホームページ</h1>
+        <nav>
+            <ul>
+                <b>
+                    <h3>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="urls.html">いろんなURL集</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="calculator.html">電卓</a></li>
+                    <li><a href="paint.html">ペイント</a></li>
+                </h3>
+                </b>
+            </ul>
+        </nav>
+    </header>
 
-<section id="about" style="margin-top: 100px;">
-    <h2>自己紹介</h2>
-    <p> ついにHTMLで書きはじめました。<br>
-        🔰初心者プログラマーのこいんまにあの公式サイトです。<br>
-        いろんな人に感化されて、Scratch、YouTube、Python、C++、Unity、note、Gamejolt、Twitterなどをやってます。 </p>
-</section>
+    <section id="about" style="margin-top: 100px;">
+        <h2>自己紹介</h2>
+        <p> ついにHTMLで書きはじめました。<br>
+            🔰初心者プログラマーのこいんまにあの公式サイトです。<br>
+            いろんな人に感化されて、Scratch、YouTube、Python、C++、Unity、note、Gamejolt、Twitterなどをやってます。 </p>
+    </section>
 
-<section id="update">
-    <h2>更新情報</h2>
-    <p>
-        2024/06/02 ウェブサイトをリニューアルしました。<br>
-        2024/06/04 電卓を追加しました。多分このページにアクセスするデバイスのほとんどが電卓ソフトを備えていると思いますが…。<br>
-        2024/06/05 ペイントをリニューアルしました。<br>
-        2024/06/11フッターのバグを修正しました。<br>
-    </p>
-</section>
+    <section id="update">
+        <h2>更新情報</h2>
+        <p>
+            2024/06/02 ウェブサイトをリニューアルしました。<br>
+            2024/06/04 電卓を追加しました。多分このページにアクセスするデバイスのほとんどが電卓ソフトを備えていると思いますが…。<br>
+            2024/06/05 ペイントをリニューアルしました。<br>
+            2024/06/11 フッターのバグを修正しました。<br>
+            2024/11/17 なんか微妙だったのを直しました。<br>
+        </p>
+    </section>
 
-<section id="friends">
-    <h2>相互リンク</h2>
-    <p>Scratch JPの方々です。</p>
-    <a href="https://sites.google.com/view/uxrcf" target="_blank" style="color: inherit; text-decoration: none;">
-        <span class="realurl" style="text-decoration: underline;">https://sites.google.com/view/uxrcf</span>
-    </a>
-</section>
+    <section id="friends">
+        <h2>相互リンク</h2>
+        <p>Scratch JPの方々です。</p>
+        <a href="https://sites.google.com/view/uxrcf" target="_blank" style="color: inherit; text-decoration: none;">
+            <span class="realurl" style="text-decoration: underline;">https://sites.google.com/view/uxrcf</span>
+        </a>
+    </section>
 
-<div id="footer-placeholder"></div>
-</div>
+    <footer>
+        <p>&copy; 2024 こいんまにあ</p>
+    </footer>
+
+    </div>
 </body>
 </html>

@@ -5,49 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>こいんまにあのホームページ | プロジェクト</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("footer-placeholder").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>
 </head>
 <body>
 <div class="wrap">
-<div id="header-placeholder"></div>
+    <header>
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+        <h1>こいんまにあのホームページ</h1>
+        <nav>
+            <ul>
+                <b>
+                    <h3>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="urls.html">いろんなURL集</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="calculator.html">電卓</a></li>
+                    <li><a href="paint.html">ペイント</a></li>
+                </h3>
+                </b>
+            </ul>
+        </nav>
+    </header>
+    <section id="utau" style="margin-top: 100px;">
+        <h2>Undertale AU</h2>
+        <p> Undertaleの二次創作作品をつくっています。</p>    
+        <a href="https://gamejolt.com/games/Broken-Boundary/853931" target="_blank" style="color: inherit; text-decoration: none;">
+                <span class="realurl" style="text-decoration: underline; font-weight: bold;">Broken Boundary</span>
+        </a>様々なUndertale AUが詰め込まれています。
+        <br><a href="https://gamejolt.com/games/Unusualswap/774651" target="_blank" style="color: inherit; text-decoration: none;">
+            <span class="realurl" style="text-decoration: underline; font-weight: bold;">Unusualswap</span>
+        </a>自作AUです。
+    </section>
 
-<section id="utau" style="margin-top: 100px;">
-    <h2>Undertale AU</h2>
-    <p> Undertaleの二次創作作品をつくっています。</p>    
-    <a href="https://gamejolt.com/games/Broken-Boundary/853931" target="_blank" style="color: inherit; text-decoration: none;">
-            <span class="realurl" style="text-decoration: underline; font-weight: bold;">Broken Boundary</span>
-    </a>様々なUndertale AUが詰め込まれています。
-    <a href="https://gamejolt.com/games/Unusualswap/774651" target="_blank" style="color: inherit; text-decoration: none;">
-        <span class="realurl" style="text-decoration: underline; font-weight: bold;">Unusualswap</span>
-</a>自作AUです。
-</section>
+    <section id="utau">
+        <h2>Scratch</h2>
+        <p> Scratch上でもいくつかのプロジェクトを公開しています。</p>    
+        <a href="https://scratch.mit.edu/projects/1013112821/" target="_blank" style="color: inherit; text-decoration: none;">
+                <span class="realurl" style="text-decoration: underline; font-weight: bold;">UTSA [Lost Depths]</span>
+        </a>Undertale AU「Lost Depths」のアニメーションです。
+        <br><a href="https://scratch.mit.edu/projects/937686744/" target="_blank" style="color: inherit; text-decoration: none;">
+            <span class="realurl" style="text-decoration: underline; font-weight: bold;">SpaceDrift spritesheet</span>
+    </a>Undertale AU「SpaceDrift」の非公式スプライトシートです。
+    </section>
 
-<section id="utau">
-    <h2>Scratch</h2>
-    <p> Scratch上でもいくつかのプロジェクトを公開しています。</p>    
-    <a href="https://scratch.mit.edu/projects/1013112821/" target="_blank" style="color: inherit; text-decoration: none;">
-            <span class="realurl" style="text-decoration: underline; font-weight: bold;">UTSA [Lost Depths]</span>
-    </a>Undertale AU「Lost Depths」のアニメーションです。
-</section>
-
-<div id="footer-placeholder"></div>
+    <footer>
+        <p>&copy; 2024 こいんまにあ</p>
+    </footer>
 </div>
 </body>
 </html>
